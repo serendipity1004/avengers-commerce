@@ -2,6 +2,7 @@
  * Root
  * */
 import RootRoute from './root/root';
+import LandingPage from './LandingPage/LandingPage';
 
 /**
  * Exports
@@ -10,7 +11,7 @@ import RootRoute from './root/root';
 const mainRoutes = [
     {
         path: '/',
-        component:RootRoute,
+        component:LandingPage,
         wrapper:''
     }
 ];

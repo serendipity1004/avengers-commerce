@@ -6,6 +6,8 @@ const bodyParser = require('body-parser');
 const envResult = require('dotenv').config();
 const {createLogger, format, transports} = require('winston');
 const {combine, timestamp, label, prettyPrint} = format;
+const {fillProducts} = require('./batch/preConfig');
+const Product = require('./models/products');
 const CONFIGS = process.env.ENV === 'prod' ?
     require('./configs/production') :
     process.env.ENV === 'dev' ?
@@ -26,6 +28,12 @@ const logger = createLogger({
 
 const app = express();
 
+Product.findOne({name: 'Big Titties'}).exec((err, result) => {
+    if (!result) {
+        fillProducts();
+    }
+});
+
 /**
  * Mongo Setup
  * */
@@ -35,6 +43,7 @@ mongoose.connect(CONFIGS.MONGO_URI);
 /**
  * Middlewares
  * */
+app.use(express.static('public'));
 app.use(bodyParser.json());
 app.use(expressSession({
     secret: CONFIGS.SESSION_SECRET,
@@ -49,6 +58,12 @@ app.use(expressSession({
             maxAge: CONFIGS.SESSION_LIFE
         }
 }));
+
+/**
+ * Routes
+ * */
+require('./routes/products')(app);
+require('./routes/user')(app);
 
 /**
  * Start

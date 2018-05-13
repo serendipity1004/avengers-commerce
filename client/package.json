@@ -2,9 +2,15 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "proxy": {
+    "/api/*": {
+      "target": "http://127.0.0.1:8000"
+    }
+  },
   "dependencies": {
     "auth0-js": "^9.4.1",
     "axios": "^0.18.0",
+    "classnames": "^2.2.5",
     "history": "^4.7.2",
     "material-ui": "^1.0.0-beta.35",
     "material-ui-icons": "^1.0.0-beta.35",
@@ -15,6 +21,7 @@
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "redux": "^3.7.2",
+    "redux-devtools-extension": "^2.13.2",
     "redux-form": "^7.3.0",
     "redux-thunk": "^2.2.0"
   },
