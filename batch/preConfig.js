@@ -5,14 +5,12 @@ async function fillProducts() {
         [
             'Captain America',
             'Thor',
-            'Big Titties',
             'Iron Man',
             'Hulk',
             'Dr. Strange',
             'Vision',
             'Groot',
             'War Machine',
-            'Another Titties',
             'Bucky',
             'Mantis',
         ];
