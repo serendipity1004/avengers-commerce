@@ -34,7 +34,7 @@ class Footer extends React.Component {
                                 Email :
                             </Typography>
                             <Typography variant="subheading" className={classNames(classes.white, classes.smallContent)}>
-                                redvelvetnaked@gmail.com
+                                gmail@gmail.com
                             </Typography>
                         </Grid>
                         <Grid item lg={4}>
@@ -62,7 +62,7 @@ class Footer extends React.Component {
                                 Email :
                             </Typography>
                             <Typography variant="subheading" className={classNames(classes.white, classes.smallContent)}>
-                                redvelvetnaked@gmail.com
+                                gmail@gmail.com
                             </Typography>
                         </Grid>
                     </Grid>
