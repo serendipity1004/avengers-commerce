@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "auth0-js": "^9.4.1",
-    "axios": "^0.18.0",
+    "axios": "^0.30.2",
     "classnames": "^2.2.5",
     "history": "^4.7.2",
     "material-ui": "^1.0.0-beta.35",
